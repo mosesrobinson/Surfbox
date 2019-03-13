@@ -15,6 +15,9 @@
 		394E056F2238CC44005B2DAA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E056E2238CC44005B2DAA /* SettingsViewController.swift */; };
 		394E05712238CC95005B2DAA /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E05702238CC95005B2DAA /* WishListViewController.swift */; };
 		394E05732238CCAC005B2DAA /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E05722238CCAC005B2DAA /* SearchDetailViewController.swift */; };
+		394E05772239C1AD005B2DAA /* Surfbox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 394E05752239C1AD005B2DAA /* Surfbox.xcdatamodeld */; };
+		394E057B2239C40A005B2DAA /* VODController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E057A2239C40A005B2DAA /* VODController.swift */; };
+		394E057D2239C433005B2DAA /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E057C2239C433005B2DAA /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		394E056E2238CC44005B2DAA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		394E05702238CC95005B2DAA /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
 		394E05722238CCAC005B2DAA /* SearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
+		394E05762239C1AD005B2DAA /* Surfbox.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Surfbox.xcdatamodel; sourceTree = "<group>"; };
+		394E057A2239C40A005B2DAA /* VODController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VODController.swift; sourceTree = SOURCE_ROOT; };
+		394E057C2239C433005B2DAA /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +67,11 @@
 			isa = PBXGroup;
 			children = (
 				394E055922378B53005B2DAA /* AppDelegate.swift */,
-				394E055D22378B53005B2DAA /* Main.storyboard */,
+				394E05782239C1C7005B2DAA /* Storyboards */,
+				394E05742239C189005B2DAA /* Model */,
+				394E05792239C251005B2DAA /* Model Controller */,
 				394E056B22384A35005B2DAA /* View Controllers */,
 				394E056022378B55005B2DAA /* Assets.xcassets */,
-				394E056222378B55005B2DAA /* LaunchScreen.storyboard */,
 				394E056522378B55005B2DAA /* Info.plist */,
 			);
 			path = Surfbox;
@@ -79,6 +86,32 @@
 				394E05722238CCAC005B2DAA /* SearchDetailViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		394E05742239C189005B2DAA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				394E05752239C1AD005B2DAA /* Surfbox.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		394E05782239C1C7005B2DAA /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				394E055D22378B53005B2DAA /* Main.storyboard */,
+				394E056222378B55005B2DAA /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		394E05792239C251005B2DAA /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				394E057A2239C40A005B2DAA /* VODController.swift */,
+				394E057C2239C433005B2DAA /* CoreDataStack.swift */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,9 +187,12 @@
 			files = (
 				394E055A22378B53005B2DAA /* AppDelegate.swift in Sources */,
 				394E05732238CCAC005B2DAA /* SearchDetailViewController.swift in Sources */,
+				394E057B2239C40A005B2DAA /* VODController.swift in Sources */,
 				394E05712238CC95005B2DAA /* WishListViewController.swift in Sources */,
+				394E05772239C1AD005B2DAA /* Surfbox.xcdatamodeld in Sources */,
 				394E056D22384A89005B2DAA /* SearchTableViewController.swift in Sources */,
 				394E056F2238CC44005B2DAA /* SettingsViewController.swift in Sources */,
+				394E057D2239C433005B2DAA /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +392,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		394E05752239C1AD005B2DAA /* Surfbox.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				394E05762239C1AD005B2DAA /* Surfbox.xcdatamodel */,
+			);
+			currentVersion = 394E05762239C1AD005B2DAA /* Surfbox.xcdatamodel */;
+			path = Surfbox.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 394E054E22378B53005B2DAA /* Project object */;
 }
