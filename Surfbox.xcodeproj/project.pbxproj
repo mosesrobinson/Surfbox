@@ -18,6 +18,10 @@
 		394E05772239C1AD005B2DAA /* Surfbox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 394E05752239C1AD005B2DAA /* Surfbox.xcdatamodeld */; };
 		394E057B2239C40A005B2DAA /* VODController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E057A2239C40A005B2DAA /* VODController.swift */; };
 		394E057D2239C433005B2DAA /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E057C2239C433005B2DAA /* CoreDataStack.swift */; };
+		394E057F223A2B67005B2DAA /* VODTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E057E223A2B67005B2DAA /* VODTableViewCell.swift */; };
+		394E0581223A34FF005B2DAA /* VOD+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E0580223A34FF005B2DAA /* VOD+Convenience.swift */; };
+		394E0583223A35D2005B2DAA /* VOD+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E0582223A35D2005B2DAA /* VOD+Codable.swift */; };
+		394E0585223A3687005B2DAA /* VODRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E0584223A3687005B2DAA /* VODRepresentation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		394E05762239C1AD005B2DAA /* Surfbox.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Surfbox.xcdatamodel; sourceTree = "<group>"; };
 		394E057A2239C40A005B2DAA /* VODController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VODController.swift; sourceTree = SOURCE_ROOT; };
 		394E057C2239C433005B2DAA /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		394E057E223A2B67005B2DAA /* VODTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VODTableViewCell.swift; sourceTree = "<group>"; };
+		394E0580223A34FF005B2DAA /* VOD+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VOD+Convenience.swift"; sourceTree = "<group>"; };
+		394E0582223A35D2005B2DAA /* VOD+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VOD+Codable.swift"; sourceTree = "<group>"; };
+		394E0584223A3687005B2DAA /* VODRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VODRepresentation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				394E056C22384A89005B2DAA /* SearchTableViewController.swift */,
+				394E057E223A2B67005B2DAA /* VODTableViewCell.swift */,
 				394E056E2238CC44005B2DAA /* SettingsViewController.swift */,
 				394E05702238CC95005B2DAA /* WishListViewController.swift */,
 				394E05722238CCAC005B2DAA /* SearchDetailViewController.swift */,
@@ -92,6 +101,9 @@
 			isa = PBXGroup;
 			children = (
 				394E05752239C1AD005B2DAA /* Surfbox.xcdatamodeld */,
+				394E0580223A34FF005B2DAA /* VOD+Convenience.swift */,
+				394E0582223A35D2005B2DAA /* VOD+Codable.swift */,
+				394E0584223A3687005B2DAA /* VODRepresentation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,11 +199,15 @@
 			files = (
 				394E055A22378B53005B2DAA /* AppDelegate.swift in Sources */,
 				394E05732238CCAC005B2DAA /* SearchDetailViewController.swift in Sources */,
+				394E0585223A3687005B2DAA /* VODRepresentation.swift in Sources */,
 				394E057B2239C40A005B2DAA /* VODController.swift in Sources */,
 				394E05712238CC95005B2DAA /* WishListViewController.swift in Sources */,
 				394E05772239C1AD005B2DAA /* Surfbox.xcdatamodeld in Sources */,
+				394E0581223A34FF005B2DAA /* VOD+Convenience.swift in Sources */,
 				394E056D22384A89005B2DAA /* SearchTableViewController.swift in Sources */,
 				394E056F2238CC44005B2DAA /* SettingsViewController.swift in Sources */,
+				394E057F223A2B67005B2DAA /* VODTableViewCell.swift in Sources */,
+				394E0583223A35D2005B2DAA /* VOD+Codable.swift in Sources */,
 				394E057D2239C433005B2DAA /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,4 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+    <entity name="Genre" representedClassName="Genre" syncable="YES" codeGenerationType="class">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="vod" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VOD" inverseName="genres" inverseEntity="VOD" syncable="YES"/>
+    </entity>
+    <entity name="Source" representedClassName="Source" syncable="YES" codeGenerationType="class">
+        <attribute name="appDowloadLink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="appName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="vod" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VOD" inverseName="sources" inverseEntity="VOD" syncable="YES"/>
+    </entity>
+    <entity name="VOD" representedClassName="VOD" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="overview" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="posterLarge" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="posterSmall" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rating" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="releaseYear" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="genres" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Genre" inverseName="vod" inverseEntity="Genre" syncable="YES"/>
+        <relationship name="sources" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Source" inverseName="vod" inverseEntity="Source" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="VOD" positionX="-430.41796875" positionY="-157.859375" width="128" height="178"/>
+        <element name="Genre" positionX="-232.4140625" positionY="95.828125" width="128" height="73"/>
+        <element name="Source" positionX="-627.12890625" positionY="67.4375" width="128" height="103"/>
+    </elements>
 </model>
