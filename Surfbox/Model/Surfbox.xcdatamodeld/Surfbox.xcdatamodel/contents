@@ -11,12 +11,12 @@
         <relationship name="vod" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VOD" inverseName="sources" inverseEntity="VOD" syncable="YES"/>
     </entity>
     <entity name="VOD" representedClassName="VOD" syncable="YES" codeGenerationType="class">
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="overview" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="posterLarge" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="posterSmall" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rating" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="releaseYear" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="releaseYear" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="genres" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Genre" inverseName="vod" inverseEntity="Genre" syncable="YES"/>
         <relationship name="sources" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Source" inverseName="vod" inverseEntity="Source" syncable="YES"/>

@@ -13,10 +13,8 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.searchController = searchController
-        navigationItem.searchController?.dimsBackgroundDuringPresentation = false
-        navigationItem.hidesSearchBarWhenScrolling = false
-        searchController.searchBar.delegate = self
+        setUpApperance()
+        setUpSearchController()
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -30,6 +28,19 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
                 searchBar.text = ""
             }
         }
+    }
+    
+    private func setUpSearchController() {
+        navigationItem.searchController = searchController
+        navigationItem.searchController?.dimsBackgroundDuringPresentation = false
+        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.searchBar.delegate = self
+        searchController.searchBar.tintColor = AppearanceHelper.paperWhite
+    }
+    
+    private func setUpApperance() {
+        
+        tableView.backgroundView = UIImageView(image: UIImage(named: "Background"))
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,13 +68,15 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     
     // MARK: - Private
     
-    private func loadImage(forCell cell: UITableViewCell, forItemAt indexPath: IndexPath) {
+    private func loadImage(forCell cell: VODTableViewCell, forItemAt indexPath: IndexPath) {
         
         let vod = vodController.searchedVODs[indexPath.row]
         
         if let image = cache.value(for: vod.id) {
             
             cell.imageView?.image = image
+            cell.imageView?.contentMode = .scaleAspectFit
+            return
         } else {
             
             let fetchSmallPhotoOperation = FetchSmallPhotoOperation(vod: vod)
@@ -82,6 +95,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
                 }
                 
                 cell.imageView?.image = image
+                cell.imageView?.contentMode = .scaleAspectFit
                 self.tableView.reloadData()
             }
             
@@ -106,6 +120,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
             
             destination.vodController = vodController
             destination.vod = vod
+            destination.vodID = vod.id
         }
     }
     

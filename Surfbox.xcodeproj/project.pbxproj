@@ -12,20 +12,21 @@
 		394E056122378B55005B2DAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 394E056022378B55005B2DAA /* Assets.xcassets */; };
 		394E056422378B55005B2DAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 394E056222378B55005B2DAA /* LaunchScreen.storyboard */; };
 		394E056D22384A89005B2DAA /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E056C22384A89005B2DAA /* SearchTableViewController.swift */; };
-		394E056F2238CC44005B2DAA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E056E2238CC44005B2DAA /* SettingsViewController.swift */; };
-		394E05712238CC95005B2DAA /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E05702238CC95005B2DAA /* WishListViewController.swift */; };
 		394E05732238CCAC005B2DAA /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E05722238CCAC005B2DAA /* SearchDetailViewController.swift */; };
 		394E05772239C1AD005B2DAA /* Surfbox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 394E05752239C1AD005B2DAA /* Surfbox.xcdatamodeld */; };
 		394E057B2239C40A005B2DAA /* VODController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E057A2239C40A005B2DAA /* VODController.swift */; };
 		394E057D2239C433005B2DAA /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E057C2239C433005B2DAA /* CoreDataStack.swift */; };
 		394E057F223A2B67005B2DAA /* VODTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E057E223A2B67005B2DAA /* VODTableViewCell.swift */; };
 		394E0581223A34FF005B2DAA /* VOD+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E0580223A34FF005B2DAA /* VOD+Convenience.swift */; };
-		394E0583223A35D2005B2DAA /* VOD+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E0582223A35D2005B2DAA /* VOD+Codable.swift */; };
 		394E0585223A3687005B2DAA /* VODRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E0584223A3687005B2DAA /* VODRepresentation.swift */; };
 		394E0587223B93DD005B2DAA /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E0586223B93DD005B2DAA /* Cache.swift */; };
 		394E058A223B9551005B2DAA /* ConcurrentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E0589223B9551005B2DAA /* ConcurrentOperation.swift */; };
 		394E058C223B962F005B2DAA /* FetchSmallPhotoOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E058B223B962F005B2DAA /* FetchSmallPhotoOperation.swift */; };
 		394E058E223B9E53005B2DAA /* FetchLargePhotoOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E058D223B9E53005B2DAA /* FetchLargePhotoOperation.swift */; };
+		394E0590223C3F77005B2DAA /* WishlistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E058F223C3F77005B2DAA /* WishlistTableViewController.swift */; };
+		394E0592223C4081005B2DAA /* WishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E0591223C4081005B2DAA /* WishTableViewCell.swift */; };
+		394E0594223C44ED005B2DAA /* FetchWithCoreDataPhotoOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E0593223C44ED005B2DAA /* FetchWithCoreDataPhotoOperation.swift */; };
+		394E0596223C5B3A005B2DAA /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E0595223C5B3A005B2DAA /* AppearanceHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,20 +37,21 @@
 		394E056322378B55005B2DAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		394E056522378B55005B2DAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		394E056C22384A89005B2DAA /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
-		394E056E2238CC44005B2DAA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		394E05702238CC95005B2DAA /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
 		394E05722238CCAC005B2DAA /* SearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
 		394E05762239C1AD005B2DAA /* Surfbox.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Surfbox.xcdatamodel; sourceTree = "<group>"; };
 		394E057A2239C40A005B2DAA /* VODController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VODController.swift; sourceTree = SOURCE_ROOT; };
 		394E057C2239C433005B2DAA /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		394E057E223A2B67005B2DAA /* VODTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VODTableViewCell.swift; sourceTree = "<group>"; };
 		394E0580223A34FF005B2DAA /* VOD+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VOD+Convenience.swift"; sourceTree = "<group>"; };
-		394E0582223A35D2005B2DAA /* VOD+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VOD+Codable.swift"; sourceTree = "<group>"; };
 		394E0584223A3687005B2DAA /* VODRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VODRepresentation.swift; sourceTree = "<group>"; };
 		394E0586223B93DD005B2DAA /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		394E0589223B9551005B2DAA /* ConcurrentOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentOperation.swift; sourceTree = "<group>"; };
 		394E058B223B962F005B2DAA /* FetchSmallPhotoOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSmallPhotoOperation.swift; sourceTree = "<group>"; };
 		394E058D223B9E53005B2DAA /* FetchLargePhotoOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLargePhotoOperation.swift; sourceTree = "<group>"; };
+		394E058F223C3F77005B2DAA /* WishlistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistTableViewController.swift; sourceTree = "<group>"; };
+		394E0591223C4081005B2DAA /* WishTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishTableViewCell.swift; sourceTree = "<group>"; };
+		394E0593223C44ED005B2DAA /* FetchWithCoreDataPhotoOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchWithCoreDataPhotoOperation.swift; sourceTree = "<group>"; };
+		394E0595223C5B3A005B2DAA /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +102,8 @@
 				394E056C22384A89005B2DAA /* SearchTableViewController.swift */,
 				394E057E223A2B67005B2DAA /* VODTableViewCell.swift */,
 				394E05722238CCAC005B2DAA /* SearchDetailViewController.swift */,
-				394E056E2238CC44005B2DAA /* SettingsViewController.swift */,
-				394E05702238CC95005B2DAA /* WishListViewController.swift */,
+				394E058F223C3F77005B2DAA /* WishlistTableViewController.swift */,
+				394E0591223C4081005B2DAA /* WishTableViewCell.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -111,7 +113,6 @@
 			children = (
 				394E05752239C1AD005B2DAA /* Surfbox.xcdatamodeld */,
 				394E0580223A34FF005B2DAA /* VOD+Convenience.swift */,
-				394E0582223A35D2005B2DAA /* VOD+Codable.swift */,
 				394E0584223A3687005B2DAA /* VODRepresentation.swift */,
 			);
 			path = Model;
@@ -132,6 +133,7 @@
 				394E057A2239C40A005B2DAA /* VODController.swift */,
 				394E057C2239C433005B2DAA /* CoreDataStack.swift */,
 				394E0586223B93DD005B2DAA /* Cache.swift */,
+				394E0595223C5B3A005B2DAA /* AppearanceHelper.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -142,6 +144,7 @@
 				394E0589223B9551005B2DAA /* ConcurrentOperation.swift */,
 				394E058B223B962F005B2DAA /* FetchSmallPhotoOperation.swift */,
 				394E058D223B9E53005B2DAA /* FetchLargePhotoOperation.swift */,
+				394E0593223C44ED005B2DAA /* FetchWithCoreDataPhotoOperation.swift */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -217,21 +220,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				394E0592223C4081005B2DAA /* WishTableViewCell.swift in Sources */,
+				394E0590223C3F77005B2DAA /* WishlistTableViewController.swift in Sources */,
 				394E055A22378B53005B2DAA /* AppDelegate.swift in Sources */,
 				394E05732238CCAC005B2DAA /* SearchDetailViewController.swift in Sources */,
+				394E0594223C44ED005B2DAA /* FetchWithCoreDataPhotoOperation.swift in Sources */,
+				394E0596223C5B3A005B2DAA /* AppearanceHelper.swift in Sources */,
 				394E0585223A3687005B2DAA /* VODRepresentation.swift in Sources */,
 				394E057B2239C40A005B2DAA /* VODController.swift in Sources */,
-				394E05712238CC95005B2DAA /* WishListViewController.swift in Sources */,
 				394E05772239C1AD005B2DAA /* Surfbox.xcdatamodeld in Sources */,
 				394E058C223B962F005B2DAA /* FetchSmallPhotoOperation.swift in Sources */,
 				394E0587223B93DD005B2DAA /* Cache.swift in Sources */,
 				394E0581223A34FF005B2DAA /* VOD+Convenience.swift in Sources */,
 				394E058E223B9E53005B2DAA /* FetchLargePhotoOperation.swift in Sources */,
 				394E056D22384A89005B2DAA /* SearchTableViewController.swift in Sources */,
-				394E056F2238CC44005B2DAA /* SettingsViewController.swift in Sources */,
 				394E058A223B9551005B2DAA /* ConcurrentOperation.swift in Sources */,
 				394E057F223A2B67005B2DAA /* VODTableViewCell.swift in Sources */,
-				394E0583223A35D2005B2DAA /* VOD+Codable.swift in Sources */,
 				394E057D2239C433005B2DAA /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

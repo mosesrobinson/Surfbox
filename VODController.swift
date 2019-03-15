@@ -114,6 +114,26 @@ class VODController {
             }.resume()
     }
     
+    func saveToPersistentStore() {
+        do {
+            try CoreDataStack.shared.save()
+        } catch {
+            CoreDataStack.shared.mainContext.reset()
+            NSLog("Error saving managed object context: \(error)")
+        }
+    }
+    
+    func create(from vodRepresentation: VODRepresentation) {
+        _ = VOD(vodRepresentation: vodRepresentation)
+        
+        saveToPersistentStore()
+    }
+    
+    func delete(vod: VOD) {
+        CoreDataStack.shared.mainContext.delete(vod)
+        saveToPersistentStore()
+    }
+    
     // MARK: - Properties
     
     var searchedVODs: [VODRepresentation] = []
