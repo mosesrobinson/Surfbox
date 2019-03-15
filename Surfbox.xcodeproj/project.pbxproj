@@ -22,6 +22,7 @@
 		394E0581223A34FF005B2DAA /* VOD+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E0580223A34FF005B2DAA /* VOD+Convenience.swift */; };
 		394E0583223A35D2005B2DAA /* VOD+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E0582223A35D2005B2DAA /* VOD+Codable.swift */; };
 		394E0585223A3687005B2DAA /* VODRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E0584223A3687005B2DAA /* VODRepresentation.swift */; };
+		394E0587223B93DD005B2DAA /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E0586223B93DD005B2DAA /* Cache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		394E0580223A34FF005B2DAA /* VOD+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VOD+Convenience.swift"; sourceTree = "<group>"; };
 		394E0582223A35D2005B2DAA /* VOD+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VOD+Codable.swift"; sourceTree = "<group>"; };
 		394E0584223A3687005B2DAA /* VODRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VODRepresentation.swift; sourceTree = "<group>"; };
+		394E0586223B93DD005B2DAA /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,9 +92,9 @@
 			children = (
 				394E056C22384A89005B2DAA /* SearchTableViewController.swift */,
 				394E057E223A2B67005B2DAA /* VODTableViewCell.swift */,
+				394E05722238CCAC005B2DAA /* SearchDetailViewController.swift */,
 				394E056E2238CC44005B2DAA /* SettingsViewController.swift */,
 				394E05702238CC95005B2DAA /* WishListViewController.swift */,
-				394E05722238CCAC005B2DAA /* SearchDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -122,6 +124,7 @@
 			children = (
 				394E057A2239C40A005B2DAA /* VODController.swift */,
 				394E057C2239C433005B2DAA /* CoreDataStack.swift */,
+				394E0586223B93DD005B2DAA /* Cache.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				394E057B2239C40A005B2DAA /* VODController.swift in Sources */,
 				394E05712238CC95005B2DAA /* WishListViewController.swift in Sources */,
 				394E05772239C1AD005B2DAA /* Surfbox.xcdatamodeld in Sources */,
+				394E0587223B93DD005B2DAA /* Cache.swift in Sources */,
 				394E0581223A34FF005B2DAA /* VOD+Convenience.swift in Sources */,
 				394E056D22384A89005B2DAA /* SearchTableViewController.swift in Sources */,
 				394E056F2238CC44005B2DAA /* SettingsViewController.swift in Sources */,

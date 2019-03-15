@@ -10,15 +10,26 @@ import UIKit
 
 class VODTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    private func updateViews() {
+        guard let vod = vod else { return }
+        
+        titleLabel.text = vod.title
+        yearLabel.text = "(\(String(vod.releaseYear)))"
+        ratingLabel.text = vod.rating
+        
+        
+    }
+    
+    // MARK: - Properties
+    
+    var vod: VODRepresentation? {
+        didSet {
+            updateViews()
+        }
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var yearLabel: UILabel!
+    @IBOutlet var ratingLabel: UILabel!
+    @IBOutlet var posterView: UIImageView!
 }

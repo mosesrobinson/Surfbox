@@ -12,19 +12,45 @@ class SearchDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        fetchSingleVOD()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func fetchSingleVOD() {
+        
+        guard let vod = vod else { return }
+        
+        vodController?.fetchSingleVOD(with: vod.id, completion: { (vodRepresentation, error) in
+            guard error == nil else { return }
+            
+            DispatchQueue.main.async {
+                self.vod = vodRepresentation
+                self.updateViews()
+            }
+        })
+        
     }
-    */
+    
+    private func updateViews() {
+        guard let vod = vod else { return }
+        
+        titleLabel?.text = vod.title
+        overviewLabel?.text = vod.overview
+    }
+    
+    
+    // MARK: - Properties
+    
+    var vodController: VODController?
+    
+    var vod: VODRepresentation? {
+        didSet {
+            updateViews()
+        }
+    }
+    
+    @IBOutlet var overviewLabel: UITextView!
+    @IBOutlet var titleLabel: UILabel!
+    
 
 }
