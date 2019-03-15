@@ -13,6 +13,7 @@ class SearchDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        updateViews()
         fetchSingleVOD()
     }
     
