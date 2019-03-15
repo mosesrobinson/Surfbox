@@ -6,8 +6,8 @@
 //  Copyright © 2019 Moses Robinson. All rights reserved.
 //
 
-import Foundation
-import  CoreData
+import UIKit
+import CoreData
 
 enum HTTPMethod: String {
     case put = "PUT"
@@ -58,7 +58,6 @@ class VODController {
             
             do {
                 let jsonDecoder = JSONDecoder()
-               // jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
                 
                 let vodRepresentations = try jsonDecoder.decode(VODRepresentations.self, from: data).results
                 self.searchedVODs = vodRepresentations
@@ -105,7 +104,6 @@ class VODController {
             
             do {
                 let jsonDecoder = JSONDecoder()
-                //jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
                 
                 let vodRepresentation = try jsonDecoder.decode(VODRepresentation.self, from: data)
                 completion(vodRepresentation, nil)

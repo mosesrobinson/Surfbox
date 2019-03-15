@@ -23,6 +23,9 @@
 		394E0583223A35D2005B2DAA /* VOD+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E0582223A35D2005B2DAA /* VOD+Codable.swift */; };
 		394E0585223A3687005B2DAA /* VODRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E0584223A3687005B2DAA /* VODRepresentation.swift */; };
 		394E0587223B93DD005B2DAA /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E0586223B93DD005B2DAA /* Cache.swift */; };
+		394E058A223B9551005B2DAA /* ConcurrentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E0589223B9551005B2DAA /* ConcurrentOperation.swift */; };
+		394E058C223B962F005B2DAA /* FetchSmallPhotoOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E058B223B962F005B2DAA /* FetchSmallPhotoOperation.swift */; };
+		394E058E223B9E53005B2DAA /* FetchLargePhotoOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394E058D223B9E53005B2DAA /* FetchLargePhotoOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		394E0582223A35D2005B2DAA /* VOD+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VOD+Codable.swift"; sourceTree = "<group>"; };
 		394E0584223A3687005B2DAA /* VODRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VODRepresentation.swift; sourceTree = "<group>"; };
 		394E0586223B93DD005B2DAA /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		394E0589223B9551005B2DAA /* ConcurrentOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentOperation.swift; sourceTree = "<group>"; };
+		394E058B223B962F005B2DAA /* FetchSmallPhotoOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSmallPhotoOperation.swift; sourceTree = "<group>"; };
+		394E058D223B9E53005B2DAA /* FetchLargePhotoOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLargePhotoOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 				394E05742239C189005B2DAA /* Model */,
 				394E05792239C251005B2DAA /* Model Controller */,
 				394E056B22384A35005B2DAA /* View Controllers */,
+				394E0588223B9531005B2DAA /* Operations */,
 				394E056022378B55005B2DAA /* Assets.xcassets */,
 				394E056522378B55005B2DAA /* Info.plist */,
 			);
@@ -127,6 +134,16 @@
 				394E0586223B93DD005B2DAA /* Cache.swift */,
 			);
 			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		394E0588223B9531005B2DAA /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				394E0589223B9551005B2DAA /* ConcurrentOperation.swift */,
+				394E058B223B962F005B2DAA /* FetchSmallPhotoOperation.swift */,
+				394E058D223B9E53005B2DAA /* FetchLargePhotoOperation.swift */,
+			);
+			path = Operations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,10 +223,13 @@
 				394E057B2239C40A005B2DAA /* VODController.swift in Sources */,
 				394E05712238CC95005B2DAA /* WishListViewController.swift in Sources */,
 				394E05772239C1AD005B2DAA /* Surfbox.xcdatamodeld in Sources */,
+				394E058C223B962F005B2DAA /* FetchSmallPhotoOperation.swift in Sources */,
 				394E0587223B93DD005B2DAA /* Cache.swift in Sources */,
 				394E0581223A34FF005B2DAA /* VOD+Convenience.swift in Sources */,
+				394E058E223B9E53005B2DAA /* FetchLargePhotoOperation.swift in Sources */,
 				394E056D22384A89005B2DAA /* SearchTableViewController.swift in Sources */,
 				394E056F2238CC44005B2DAA /* SettingsViewController.swift in Sources */,
+				394E058A223B9551005B2DAA /* ConcurrentOperation.swift in Sources */,
 				394E057F223A2B67005B2DAA /* VODTableViewCell.swift in Sources */,
 				394E0583223A35D2005B2DAA /* VOD+Codable.swift in Sources */,
 				394E057D2239C433005B2DAA /* CoreDataStack.swift in Sources */,

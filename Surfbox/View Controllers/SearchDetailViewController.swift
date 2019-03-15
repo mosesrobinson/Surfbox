@@ -36,10 +36,48 @@ class SearchDetailViewController: UIViewController {
         
         titleLabel?.text = vod.title
         overviewLabel?.text = vod.overview
+        loadedImage(for: vod)
+    }
+    
+    private func loadedImage(for vod: VODRepresentation) {
+        
+        if let image = largeImageCache.value(for: vod.id) {
+            
+            posterView.image = image
+        } else {
+            
+            let fetchLargePhotoOperation = FetchLargePhotoOperation(vod: vod)
+            
+            let cacheOperation = BlockOperation {
+                guard let image = fetchLargePhotoOperation.image else { return }
+                
+                self.largeImageCache.cache(value: image, for: vod.id)
+            }
+            
+            let setImageOperation = BlockOperation {
+                guard let image = fetchLargePhotoOperation.image else { return }
+                
+                self.posterView.image = image
+            }
+            
+            cacheOperation.addDependency(fetchLargePhotoOperation)
+            setImageOperation.addDependency(fetchLargePhotoOperation)
+            
+            photoFetchQueue.addOperations([fetchLargePhotoOperation, cacheOperation], waitUntilFinished: false)
+            OperationQueue.main.addOperation(setImageOperation)
+            
+            storedFetchedOperations[vod.id] = fetchLargePhotoOperation
+        }
     }
     
     
     // MARK: - Properties
+    
+    private var storedFetchedOperations: [Int : FetchLargePhotoOperation] = [:]
+    
+    private let photoFetchQueue = OperationQueue()
+    
+    private var largeImageCache: Cache<Int, UIImage> = Cache()
     
     var vodController: VODController?
     
@@ -51,6 +89,7 @@ class SearchDetailViewController: UIViewController {
     
     @IBOutlet var overviewLabel: UITextView!
     @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var posterView: UIImageView!
     
 
 }

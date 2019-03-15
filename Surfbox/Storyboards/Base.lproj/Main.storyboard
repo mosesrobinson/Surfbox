@@ -229,6 +229,7 @@
                     <size key="freeformSize" width="375" height="800"/>
                     <connections>
                         <outlet property="overviewLabel" destination="Tzu-UX-ZmC" id="uvb-Un-XNy"/>
+                        <outlet property="posterView" destination="Q9o-c0-TU4" id="vpb-Pg-bQ8"/>
                         <outlet property="titleLabel" destination="Jza-7N-ems" id="faf-zo-pyc"/>
                     </connections>
                 </viewController>

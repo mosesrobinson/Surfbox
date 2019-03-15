@@ -22,6 +22,13 @@ class Cache<Key: Hashable, Value> {
         }
     }
     
+    func clear() {
+        queue.async {
+            self.cachedItems.removeAll()
+        }
+    }
+    
     private var cachedItems: [Key : Value] = [:]
     
-    private let queue = DispatchQueue(label: "com.MosesRobinson.RandomUsers.CacheQueue")
+    private let queue = DispatchQueue(label: "com.MosesRobinson.VODs.CacheQueue")
+}

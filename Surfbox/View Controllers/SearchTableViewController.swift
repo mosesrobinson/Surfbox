@@ -32,6 +32,10 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         }
     }
     
+    override func didReceiveMemoryWarning() {
+        print("You are low on memory")
+        cache.clear()
+    }
 
     // MARK: - Table view data source
 
@@ -46,8 +50,50 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
 
         let vod = vodController.searchedVODs[indexPath.row]
         cell.vod = vod
+        loadImage(forCell: cell, forItemAt: indexPath)
 
         return cell
+    }
+    
+    // MARK: - Private
+    
+    private func loadImage(forCell cell: UITableViewCell, forItemAt indexPath: IndexPath) {
+        
+        let vod = vodController.searchedVODs[indexPath.row]
+        
+        if let image = cache.value(for: vod.id) {
+            
+            cell.imageView?.image = image
+        } else {
+            
+            let fetchSmallPhotoOperation = FetchSmallPhotoOperation(vod: vod)
+            
+            let cacheOperation = BlockOperation {
+                guard let image = fetchSmallPhotoOperation.image else { return }
+                
+                self.cache.cache(value: image, for: vod.id)
+            }
+            
+            let cellReusedOperation = BlockOperation {
+                guard let image = fetchSmallPhotoOperation.image else { return }
+                
+                if self.tableView.indexPath(for: cell) != indexPath {
+                    return
+                }
+                
+                cell.imageView?.image = image
+                self.tableView.reloadData()
+            }
+            
+            cacheOperation.addDependency(fetchSmallPhotoOperation)
+            cellReusedOperation.addDependency(fetchSmallPhotoOperation)
+            
+            photoFetchQueue.addOperations([fetchSmallPhotoOperation, cacheOperation], waitUntilFinished: false)
+            OperationQueue.main.addOperation(cellReusedOperation)
+            
+            storedFetchedOperations[vod.id] = fetchSmallPhotoOperation
+        }
+        
     }
     
     // MARK: - Navigation
@@ -63,6 +109,13 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         }
     }
     
+    //MARK: - Properties
+    
+    private var storedFetchedOperations: [Int : FetchSmallPhotoOperation] = [:]
+    
+    private let photoFetchQueue = OperationQueue()
+    
+    private var cache: Cache<Int, UIImage> = Cache()
 
     var vodController = VODController()
     
