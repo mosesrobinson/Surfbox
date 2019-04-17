@@ -91,18 +91,18 @@ class WishlistTableViewController: UITableViewController, NSFetchedResultsContro
     
     // MARK: - Navigation
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//        if segue.identifier == "ShowFromWish" {
-//            guard let destination = segue.destination as? SearchDetailViewController,
-//                let indexPath = tableView.indexPathForSelectedRow else { return }
-//            let vod = fetchedResultsController.object(at: indexPath)
-//
-//            destination.vodController = vodController
-//            destination.vodID = Int(vod.id)
-//        }
-//
-//    }
+    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //
+    //        if segue.identifier == "ShowFromWish" {
+    //            guard let destination = segue.destination as? SearchDetailViewController,
+    //                let indexPath = tableView.indexPathForSelectedRow else { return }
+    //            let vod = fetchedResultsController.object(at: indexPath)
+    //
+    //            destination.vodController = vodController
+    //            destination.vodID = Int(vod.id)
+    //        }
+    //
+    //    }
     
     // MARK: - NSFetchedResultsControllerDelegate
     
@@ -132,6 +132,8 @@ class WishlistTableViewController: UITableViewController, NSFetchedResultsContro
                 let newIndexPath = newIndexPath else { return }
             tableView.deleteRows(at: [indexPath], with: .none)
             tableView.insertRows(at: [newIndexPath], with: .none)
+        default:
+            break
         }
     }
     
