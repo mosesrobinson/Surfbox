@@ -14,6 +14,11 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         super.viewDidLoad()
         
         setUpApperance()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         setUpSearchController()
     }
     
@@ -122,6 +127,9 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
             destination.vod = vod
             destination.vodID = vod.id
         }
+        
+        
+        // need to create segue for showing favorites. Remove tab layout of application. 
     }
     
     //MARK: - Properties
